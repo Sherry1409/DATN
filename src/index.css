@@ -1,0 +1,11 @@
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("App.css");
+@import url('react-toastify/dist/ReactToastify.css');
+
+/*@tailwind base;*/
+@tailwind components;
+@tailwind utilities;
+
+a {
+    text-decoration: none!important;
+}

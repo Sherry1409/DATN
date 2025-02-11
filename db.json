@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "title": "iPhone X 222323 2222222",
+      "brand": "ffff",
+      "price": "8992222",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...22222222",
+      "id": "2",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    },
+    {
+      "id": "4",
+      "title": "OPPOF19",
+      "description": "OPPO F19 is officially announced on April 2021.",
+      "price": 280,
+      "brand": "OPPO",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Huawei P30",
+      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      "price": 499,
+      "brand": "Huawei",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+    },
+    {
+      "title": "Samsung Chu Văn Điệp",
+      "brand": "samsung",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+      "price": "222",
+      "description": "sSsSsdffdvbhmgmgmgbgg\n",
+      "id": "oxosX44"
+    },
+    {
+      "title": "Samsung Chu Văn Điệp",
+      "brand": "samsung",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+      "price": "222",
+      "description": "sSsSsdffdvbhmgmgmgbgg\n",
+      "id": "yfyVabw"
+    }
+  ],
+  "users": [
+    {
+      "email": "longnhph37814@fpt.edu.vn",
+      "password": "$2a$10$Ixg2ko11g52bRTUGBwF2Z.7XGIWVNi3kjay1SwLoii12IOgGLVrK.",
+      "id": 11
+    },
+    {
+      "email": "long@gmail.com",
+      "password": "$2a$10$gharwJSuDy6wPbtHZ4slQ.ayhQkABnePoyWsaJfvXZn7Ae8uUGfDW",
+      "id": 12
+    },
+    {
+      "email": "long22@gmail.com",
+      "password": "$2a$10$MXvIaxEbAGMuCD/dKaArHeuoKvN8ndiFgchIu2VYygFJEuUxwS8JS",
+      "id": 13
+    },
+    {
+      "email": "long123@gmail.com",
+      "password": "$2a$10$RM2Wm0ApVPsjD2XVtSgyIOLvVhbLtbOJK/agY1c3eJA9UO8F/d4KS",
+      "id": 14
+    }
+  ]
+}
