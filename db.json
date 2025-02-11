@@ -1,44 +1,46 @@
 {
   "products": [
     {
-      "title": "iPhone X 222323 2222222",
-      "brand": "ffff",
-      "price": "8992222",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...22222222",
-      "id": "2",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+      "id": 1,
+      "name": "Áo thun nam",
+      "description": "Áo thun cotton 100%, thoáng mát và dễ chịu.",
+      "price": 200000,
+      "category": "Áo"
     },
     {
-      "id": "4",
-      "title": "OPPOF19",
-      "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
-      "brand": "OPPO",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+      "id": 2,
+      "name": "Quần jeans nữ",
+      "description": "Quần jeans chất liệu denim, kiểu dáng trẻ trung.",
+      "price": 400000,
+      "category": "Quần"
     },
     {
-      "id": "5",
-      "title": "Huawei P30",
-      "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
-      "price": 499,
-      "brand": "Huawei",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg"
+      "id": 3,
+      "name": "Đầm maxi",
+      "description": "Đầm maxi dài, phù hợp cho mùa hè.",
+      "price": 350000,
+      "category": "Đầm"
     },
     {
-      "title": "Samsung Chu Văn Điệp",
-      "brand": "samsung",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-      "price": "222",
-      "description": "sSsSsdffdvbhmgmgmgbgg\n",
-      "id": "oxosX44"
+      "id": 4,
+      "name": "Áo khoác nam",
+      "description": "Áo khoác dày dặn, giữ ấm tốt cho mùa đông.",
+      "price": 600000,
+      "category": "Áo"
     },
     {
-      "title": "Samsung Chu Văn Điệp",
-      "brand": "samsung",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
-      "price": "222",
-      "description": "sSsSsdffdvbhmgmgmgbgg\n",
-      "id": "yfyVabw"
+      "id": 5,
+      "name": "Giày thể thao",
+      "description": "Giày thể thao nhẹ, thoải mái cho mọi hoạt động.",
+      "price": 800000,
+      "category": "Giày"
+    },
+    {
+      "id": 6,
+      "name": "Túi xách nữ",
+      "description": "Túi xách thời trang, chất liệu bền bỉ.",
+      "price": 300000,
+      "category": "Phụ kiện"
     }
   ],
   "users": [
