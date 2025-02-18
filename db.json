@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Áo thun nam",
+      "description": "Áo thun cotton 100%, thoáng mát và dễ chịu.",
+      "price": 200000,
+      "category": "Áo"
+    },
+    {
+      "id": 2,
+      "name": "Quần jeans nữ",
+      "description": "Quần jeans chất liệu denim, kiểu dáng trẻ trung.",
+      "price": 400000,
+      "category": "Quần"
+    },
+    {
+      "id": 3,
+      "name": "Đầm maxi",
+      "description": "Đầm maxi dài, phù hợp cho mùa hè.",
+      "price": 350000,
+      "category": "Đầm"
+    },
+    {
+      "id": 4,
+      "name": "Áo khoác nam",
+      "description": "Áo khoác dày dặn, giữ ấm tốt cho mùa đông.",
+      "price": 600000,
+      "category": "Áo"
+    },
+    {
+      "id": 5,
+      "name": "Giày thể thao",
+      "description": "Giày thể thao nhẹ, thoải mái cho mọi hoạt động.",
+      "price": 800000,
+      "category": "Giày"
+    },
+    {
+      "id": 6,
+      "name": "Túi xách nữ",
+      "description": "Túi xách thời trang, chất liệu bền bỉ.",
+      "price": 300000,
+      "category": "Phụ kiện"
+    }
+  ],
+  "users": [
+    {
+      "email": "longnhph37814@fpt.edu.vn",
+      "password": "$2a$10$Ixg2ko11g52bRTUGBwF2Z.7XGIWVNi3kjay1SwLoii12IOgGLVrK.",
+      "id": 11
+    },
+    {
+      "email": "long@gmail.com",
+      "password": "$2a$10$gharwJSuDy6wPbtHZ4slQ.ayhQkABnePoyWsaJfvXZn7Ae8uUGfDW",
+      "id": 12
+    },
+    {
+      "email": "long22@gmail.com",
+      "password": "$2a$10$MXvIaxEbAGMuCD/dKaArHeuoKvN8ndiFgchIu2VYygFJEuUxwS8JS",
+      "id": 13
+    },
+    {
+      "email": "long123@gmail.com",
+      "password": "$2a$10$RM2Wm0ApVPsjD2XVtSgyIOLvVhbLtbOJK/agY1c3eJA9UO8F/d4KS",
+      "id": 14
+    }
+  ]
+}
