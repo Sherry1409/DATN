@@ -1,12 +1,3 @@
-import { Button } from '@/components/ui/button'
-
-export default function Home() {
-  return (
-    <div>
-      <Button> </Button>
-    </div>
-  )
-}
 import React, { useState, useEffect } from 'react'
 import Header from './Component/LayoutComponent/Header'
 import Footer from './Component/LayoutComponent/Footer'

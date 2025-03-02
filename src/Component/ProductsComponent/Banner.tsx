@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Banner: React.FC = () => {
   return (
     <>
@@ -19,12 +18,6 @@ const Banner: React.FC = () => {
       </section>
     </>
   )
-=======
-import React from 'react'
-
-const Banner = () => {
-  return <div></div>
->>>>>>> e1bb3a2 (Initial commit)
 }
 
 export default Banner
