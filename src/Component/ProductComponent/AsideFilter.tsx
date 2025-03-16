@@ -258,6 +258,7 @@ const AsideFilter: React.FC<AsideFilterProps> = ({ setFilters }) => {
                           cursor: "pointer",
                           paddingBottom: "7px",
                           paddingRight: "8px",
+                          marginLeft:'5px',
                           paddingLeft: "8px",
                           fontFamily: "Raleway",
                         }}

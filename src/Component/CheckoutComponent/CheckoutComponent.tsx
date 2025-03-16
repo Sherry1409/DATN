@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
-import { notification, Modal, message } from "antd";
+import { notification, Modal } from "antd";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../Redux/store";
 import { fetchCart } from "../../Redux/Reducer/CartReducer";
@@ -11,12 +11,8 @@ import { postOrder } from "../../Redux/Reducer/OrderReducer";
 import { fetchVouchers } from "../../Redux/Reducer/VoucherReducer";
 import { fetchPaymentStatus } from "../../Redux/Reducer/OrderReducer";
 import QR from "../../assets/imgs/qr.jpg";
-import {
-  EnvironmentFilled,
-  EnvironmentOutlined,
-  EnvironmentTwoTone,
-} from "@ant-design/icons";
-import { Switch } from "antd";
+import { EnvironmentFilled, EnvironmentOutlined, EnvironmentTwoTone} from "@ant-design/icons";
+import { Switch } from 'antd';
 import "./checkout.css";
 
 const CheckoutComponent: React.FC = () => {
@@ -54,7 +50,7 @@ const CheckoutComponent: React.FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [isSwitchOn, setIsSwitchOn] = useState(false);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const location = useLocation();
   useEffect(() => {
     if (userId) {
@@ -88,46 +84,45 @@ const CheckoutComponent: React.FC = () => {
     });
   };
 
+
+
   const getVouchers = async () => {
     try {
       const response = await api.get("/vouchers");
       setVouchers(response.data.vouchers);
     } catch (error) {
       console.log(error);
-    } finally {
-      setLoading(false);
+    } finally{
+      setLoading(false)
     }
   };
 
-  const getAddress = async () => {
+  const getAddress = async () =>{
     try {
       const response = await api.get("/address");
       setIsAddress(response.data);
     } catch (error) {
       console.log(error);
-    } finally {
-      setLoading(false);
+    } finally{
+      setLoading(false)
     }
-  };
+  }
+  
 
   useEffect(() => {
     getVouchers();
-    getAddress();
+    getAddress()
   }, []);
 
   console.log("tát cả voi chừo", isAddress);
 
   const handleModalClose = () => {
-    setShowModal(false);
+    setShowModal(false); 
   };
 
   const onChange = (checked: boolean) => {
     setIsSwitchOn(checked);
-    if (!isAddress) {
-      message.error("Bạn chưa cập nhật thông tin cá nhân !");
-      return;
-    }
-    if (checked && isAddress) {
+    if (checked) {
       setRecipientName(isAddress.data.recipient_name);
       setPhoneNumber(isAddress.data.phone_number);
       setShipAddress(isAddress.data.ship_address);
@@ -197,11 +192,11 @@ const CheckoutComponent: React.FC = () => {
       // Đóng modal sau khi thanh toán thành công
       setShowModal(false);
     } catch (error: any) {
-      const errorMessage = error?.data?.message;
+      const errorMessage = error?.data?.message 
       notification.error({
         message: "Lỗi khi thanh toán",
         description: errorMessage,
-        className: "order-sai",
+        className:'order-sai'
       });
     }
   };
@@ -219,7 +214,7 @@ const CheckoutComponent: React.FC = () => {
       notification.error({
         message: "Thông tin không đầy đủ",
         description: "Vui lòng điền đầy đủ thông tin vào các trường bắt buộc.",
-        className: "validate-thieu",
+        className: "validate-thieu"
       });
       return;
     }
@@ -295,11 +290,11 @@ const CheckoutComponent: React.FC = () => {
 
       localStorage.removeItem("cartItems");
     } catch (error: any) {
-      const errorMessage = error?.data?.message;
+      const errorMessage = error?.data?.message 
       notification.error({
         message: "Lỗi khi thanh toán",
         description: errorMessage,
-        className: "order-sai",
+        className:'order-sai'
       });
     }
   };
@@ -330,6 +325,7 @@ const CheckoutComponent: React.FC = () => {
     }
   };
 
+
   useEffect(() => {
     setTotalPrice(subtotal - discount);
   }, [subtotal, discount]);
@@ -352,7 +348,7 @@ const CheckoutComponent: React.FC = () => {
         </div>
       </div>
     );
-
+  
   return (
     <main className="main">
       <form onSubmit={handlePlaceOrder}>
@@ -388,22 +384,13 @@ const CheckoutComponent: React.FC = () => {
                       marginBottom: "10px",
                     }}
                   >
-                    Thông tin thanh toán
+                    Thông tin thanh toán 
                   </h4>
-                  {isAddress && (
                   <div className="button-address">
-                    <EnvironmentOutlined />
-                    <span style={{ marginLeft: "5px" }}>
-                      Địa chỉ mặc định của bạn
-                    </span>
-                    <Switch
-                      size="small"
-                      style={{ marginLeft: "10px" }}
-                      defaultChecked={false}
-                      onChange={onChange}
-                    />
+                  <EnvironmentOutlined/>
+                  <span style={{marginLeft:'5px'}}>Địa chỉ mặc định của bạn</span>
+                  <Switch size="small" style={{marginLeft:'10px'}} defaultChecked={false} onChange={onChange} />
                   </div>
-                  )}
                   <div>
                     <div className="col-lg-6" style={{ width: "100%" }}>
                       <div className="form-group">
@@ -510,7 +497,7 @@ const CheckoutComponent: React.FC = () => {
                           *Chọn phương thức thanh toán
                         </label>
                         <select
-                          style={{ marginTop: "5px", fontSize: "14px" }}
+                          style={{ marginTop: "5px", fontSize: '14px', }}
                           name="paymentMethod"
                           className="form-control"
                           value={paymentMethodId || ""}
@@ -518,7 +505,7 @@ const CheckoutComponent: React.FC = () => {
                             setPaymentMethodId(Number(e.target.value))
                           }
                         >
-                          <option disabled value="" className="name-pla">
+                          <option  disabled value="" className="name-pla">
                             Chọn phương thức thanh toán*
                           </option>
                           <option value={1}>
@@ -605,19 +592,16 @@ const CheckoutComponent: React.FC = () => {
                           </span>
                         </div>
                         {isVoucher?.length > 0 && (
-                          <div className="item-checkout justify-content-between">
-                            <span className="font-sm">Mã giảm giá</span>
-                            <span className="font-md-bold">
-                              {discount > 0 ? formatCurrency(discount) : "0"}
-                            </span>
-                          </div>
+                        <div className="item-checkout justify-content-between">
+                          <span className="font-sm">Mã giảm giá</span>
+                          <span className="font-md-bold">
+                            {discount > 0 ? formatCurrency(discount) : "0"}
+                          </span>
+                        </div>
                         )}
                         <div className="item-checkout justify-content-between">
                           <span className="font-xl-bold">Tổng cộng</span>
-                          <span
-                            className="font-md-bold"
-                            style={{ fontSize: "17px" }}
-                          >
+                          <span className="font-md-bold" style={{fontSize:'17px'}}>
                             {formatCurrency(subtotal - discount)}
                           </span>
                         </div>

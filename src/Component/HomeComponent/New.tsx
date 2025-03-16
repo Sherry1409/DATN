@@ -20,14 +20,13 @@ import "./new.css";
 import api from "../../Axios/Axios";
 const New: React.FC = () => {
   const [blog, setBlog] = useState<any[]>([]);
-  const [blog4, setBlog4] = useState<any>();
   const pageSize = 3;
   const [current, setCurrent] = useState(1);
 
   const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
-    setCurrent(page);
-  };
+      console.log(page);
+      setCurrent(page);
+    };
 
   useEffect(() => {
     const GetLogo = async () => {
@@ -38,21 +37,8 @@ const New: React.FC = () => {
         console.log(error);
       }
     };
-    const GetQuangCao = async () => {
-      try {
-        const { data } = await axios.get(
-          `http://127.0.0.1:8000/api/logobanner/${4}`
-        );
-        setBlog4(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     GetLogo();
-    GetQuangCao();
   }, []);
-
-  console.log("Blog 4", blog4);
 
   const paginatedBlog = blog.slice(
     (current - 1) * pageSize,
@@ -117,7 +103,10 @@ const New: React.FC = () => {
                       <p className="cardDesc font-lg neutral-500">
                         {truncateText(b.description)}
                       </p>
-                      <a className="btn btn-arrow-right">
+                      <a
+                        className="btn btn-arrow-right"
+                    
+                      >
                         Xem chi tiết
                         <img src={Arrow} alt="Kidify" />
                         <img
@@ -174,68 +163,64 @@ const New: React.FC = () => {
         </div>
       </section>
       {/* Quảng cáo  */}
-      {blog4 && (
-        <div>
-          {isOpen && (
-            <div className="box-popup-newsletter">
-              <div className="box-newsletter-overlay" onClick={closeModal} />{" "}
-              {/* Overlay có thể đóng modal */}
-              <div className="box-newsletter-wrapper">
-                <div className="box-newsletter-inner">
-                  <a
-                    className="btn-close-popup btn-close-popup-newsletter"
-                    href="#"
-                    onClick={closeModal}
-                  >
-                    <svg
-                      className="icon-16 d-inline-flex align-items-center justify-content-center"
-                      fill="#111111"
-                      stroke="#111111"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+      {isOpen && (
+        <div className="box-popup-newsletter">
+          <div className="box-newsletter-overlay" onClick={closeModal} />{" "}
+          {/* Overlay có thể đóng modal */}
+          <div className="box-newsletter-wrapper">
+            <div className="box-newsletter-inner">
+              <a
+                className="btn-close-popup btn-close-popup-newsletter"
+                href="#"
+                onClick={closeModal}
+              >
+                <svg
+                  className="icon-16 d-inline-flex align-items-center justify-content-center"
+                  fill="#111111"
+                  stroke="#111111"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </a>
+              <div className="promotion-content">
+                <div className="block-info-banner">
+                  <p className="font-3xl-bold neutral-900 title-line mb-10 wow animate__animated animate__zoomIn">
+                    Winter
+                  </p>
+                  <h2 className="heading-banner mb-10 wow animate__animated animate__shakeX">
+                    <span className="text-up">sale off</span>
+                    <span className="text-under">sale off</span>
+                  </h2>
+                  <h4 className="heading-4 title-line-2 mb-30 wow animate__animated animate__zoomIn">
+                    Anything for your baby
+                  </h4>
+                  <div className="mt-10">
+                    <a
+                      className="btn btn-double-border wow animate__animated animate__zoomIn"
+                      href="#"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </a>
-                  <div className="promotion-content">
-                    <div className="block-info-banner">
-                      <p className="font-3xl-bold neutral-900 title-line mb-10 wow animate__animated animate__zoomIn">
-                        Winter
-                      </p>
-                      <h2 className="heading-banner mb-10 wow animate__animated animate__shakeX">
-                        <span className="text-up">{blog4?.title}</span>
-                        <span className="text-under">{blog4?.title}</span>
-                      </h2>
-                      <h4 className="heading-4 title-line-2 mb-30 wow animate__animated animate__zoomIn">
-                        {blog4?.description}
-                      </h4>
-                      <div className="mt-10">
-                        <a
-                          className="btn btn-double-border wow animate__animated animate__zoomIn"
-                          href="/product"
-                        >
-                          <span>Mua sắm ngay</span>
-                        </a>
-                      </div>
-                    </div>
-                    {/* <div className="promotion-label">
-                  <img src={Promotion} alt="Kidify" />
-                </div> */}
-                    <div className="promotion-banner">
-                      <img src={blog4?.image} alt="Kidify" />
-                    </div>
+                      <span>View All Deals</span>
+                    </a>
                   </div>
+                </div>
+                <div className="promotion-label">
+                  <img src={Promotion} alt="Kidify" />
+                </div>
+                <div className="promotion-banner">
+                  <img src={PromotionBanner} alt="Kidify" />
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       )}
     </>

@@ -146,7 +146,7 @@ const ProductDetailComponent: React.FC = () => {
           sizeId,
           colorId,
         };
-        if (quantity > product.quantity && quantity > 1) {
+        if (quantity > product.quantity) {
           message.error(`Số lượng sản phẩm này chỉ còn ${product.quantity} trong kho !`);
           return;
         }
@@ -294,10 +294,10 @@ const ProductDetailComponent: React.FC = () => {
 
                   <div className="block-color">
                     <span style={{ fontFamily: "Raleway" }}>Color:</span>
-                    <label style={{ fontFamily: "Raleway", marginLeft:'5px' }}>
+                    <label style={{ fontFamily: "Raleway" }}>
                       {selectedColor || "Chọn Màu"}
                     </label>
-                    <ul className="list-color-detail">
+                    <ul className="list-color">
                       {product.colors.map((color: any) => (
                         <button
                           className="button-color"
@@ -328,10 +328,10 @@ const ProductDetailComponent: React.FC = () => {
                   </div>
                   <div className="block-size">
                     <span style={{ fontFamily: "Raleway" }}>Size:</span>
-                    <label style={{ fontFamily: "Raleway", marginLeft:'5px' }}>
+                    <label style={{ fontFamily: "Raleway" }}>
                       {selectedSize || "Chọn Size"}
                     </label>
-                    <div className="list-sizes-detail">
+                    <div className="list-sizes">
                       {product.sizes.map((size: any) => (
                         <button
                           className="button-size"
@@ -368,7 +368,6 @@ const ProductDetailComponent: React.FC = () => {
                           fontSize: "21px",
                           color: "rgb(159,134,217)",
                           fontStyle: "italic",
-                          marginLeft:'5px'
                         }}
                       >
                         Còn hàng

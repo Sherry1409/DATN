@@ -23,10 +23,8 @@ const ProductList: React.FC<ProductListProps> = ({ filters }) => {
 
   const onChange: PaginationProps['onChange'] = (page) => {
     console.log(page);
-    window.scrollTo(0, 0);
     setCurrent(page);
   };
-  
 
   const GetAllProducts = async () => {
     try {
