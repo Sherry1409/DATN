@@ -1,7 +1,13 @@
-import React from 'react'
+// src/Layout/ProductDetail/ProductDetail.tsx
+import React, { useEffect } from 'react'
+import ProductDetailComponent from '../../Component/ProductDetailComponent/ProductDetailComponent'
 
-const ProductsDetail = () => {
-  return <div></div>
+const ProductDetail: React.FC = () => {
+  return (
+    <>
+      <ProductDetailComponent />
+    </>
+  )
 }
 
-export default ProductsDetail
+export default ProductDetail

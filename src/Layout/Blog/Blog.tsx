@@ -1,7 +1,11 @@
-import React from 'react'
+import BlogComponent from '../../Component/BlogComponent/BlogComponent'
 
-const Blog = () => {
-  return <div></div>
+const Blog: React.FC = () => {
+  return (
+    <>
+      <BlogComponent />
+    </>
+  )
 }
 
 export default Blog

@@ -1,7 +1,11 @@
-import React from 'react'
+import CheckoutComponent from '../../Component/CheckoutComponent/CheckoutComponent'
 
-const Checkout = () => {
-  return <div></div>
+const Checkout: React.FC = () => {
+  return (
+    <>
+      <CheckoutComponent />
+    </>
+  )
 }
 
 export default Checkout

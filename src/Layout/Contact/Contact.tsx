@@ -1,7 +1,15 @@
-import React from 'react'
+import ContactForm from '../../Component/ContactComponent/ContactForm'
+import Maps from '../../Component/ContactComponent/Maps'
 
-const Contact = () => {
-  return <div></div>
+const Contact: React.FC = () => {
+  return (
+    <>
+      <main className='main'>
+        <Maps />
+        <ContactForm />
+      </main>
+    </>
+  )
 }
 
 export default Contact
