@@ -108,6 +108,7 @@ Route::controller(UserController::class)->middleware(['token.auth', 'user'])->gr
     // Cập nhật tài khoản
     Route::get('/user/edit', 'edit')->name('user.edit');
     Route::post('/user/update', 'update')->name('user.update');
+    
     //địa chỉ
     Route::resource('address', AddressController::class);
     Route::patch('ship-addresses/{id}/set-default',  [AddressController::class, 'setDefault'])->name('address.set-default');
